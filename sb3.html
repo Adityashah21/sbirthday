@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Simran 🎉</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap');
+    
+    /* Base body styling */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #f5f5f5;
+      overflow: hidden; /* Hide scrollbars */
+    }
+
+    /* Styles for the main content page */
+    .content-body {
+      min-height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow-y: auto;
+      background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #660099 100%);
+    }
+
+    /* Styles for the animation page */
+    .animation-body {
+      background-color: #111;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0.3;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, rgba(255, 105, 180, 0.1) 0%, rgba(138, 43, 226, 0.2) 50%, rgba(75, 0, 130, 0.3) 100%);
+      z-index: -1;
+    }
+
+    .heart {
+      position: fixed;
+      color: #ff69b4;
+      font-size: 20px;
+      opacity: 0.6;
+      animation: float 6s infinite ease-in-out;
+      z-index: 1;
+    }
+    .heart:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .heart:nth-child(2) { top: 20%; right: 20%; animation-delay: 2s; }
+    .heart:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 4s; }
+    .heart:nth-child(4) { bottom: 15%; right: 15%; animation-delay: 1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .main-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 182, 193, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      color: #ff99cc;
+      font-size: 2.8em;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 0 0 20px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 20, 147, 0.6);
+      font-family: 'Great Vibes', cursive;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #f0e6ff;
+      margin: 8px auto;
+      width: 85%;
+      line-height: 1.6;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+
+    button {
+      margin: 15px 10px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: 500;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #ff6b9d, #ff8fab);
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #ff5588, #ff7799);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+      transform: translate(-50%, -50%);
+    }
+
+    button:active::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .simran-img {
+      width: 200px;
+      height: 200px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      animation: popIn 1.5s ease-in-out;
+      border-radius: 50%;
+      border: 4px solid #ffb6c1;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.6), 0 0 50px rgba(255, 105, 180, 0.4);
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.2); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .wish {
+      display: none;
+      font-size: 1.3em;
+      color: #ffe6f7;
+      text-shadow: 0 2px 15px rgba(255, 105, 180, 0.8);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      margin: 10px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+      animation: fadeIn 2s ease-in-out;
+      width: 85%;
+    }
+
+    #finalWish {
+      display: none;
+      font-size: 1.8em;
+      color: #ffd700;
+      text-shadow: 0 0 20px #ff66cc, 0 0 40px #ff3399, 0 0 60px #ffd700;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
+      font-weight: 600;
+    }
+
+    #lights {
+      display: none;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .light-btn {
+      margin: 8px;
+      padding: 15px 30px;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #ffd700, #ffed4e);
+      box-shadow: 0 0 20px #ffd700, 0 0 40px #ffed4e;
+      border: none;
+      cursor: pointer;
+      animation: glow 1.5s infinite alternate;
+      font-size: 1.1em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #333;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ffd700, 0 0 20px #ffed4e; transform: scale(1); }
+      to { box-shadow: 0 0 25px #ffd700, 0 0 50px #ff6347; transform: scale(1.1); }
+    }
+
+    #goodnight {
+      display: none;
+      font-size: 1.8em;
+      color: #e6e6fa;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #9370db, 0 0 25px #8a2be2;
+      animation: fadeIn 3s ease-in-out;
+      font-weight: 500;
+    }
+
+    .birthday-decoration {
+      position: fixed;
+      font-size: 24px;
+      animation: bounce 2s infinite;
+      z-index: 1;
+    }
+    .birthday-decoration:nth-child(5) { top: 5%; left: 5%; animation-delay: 0s; }
+    .birthday-decoration:nth-child(6) { top: 8%; right: 8%; animation-delay: 1s; }
+    .birthday-decoration:nth-child(7) { bottom: 10%; left: 8%; animation-delay: 0.5s; }
+    .birthday-decoration:nth-child(8) { bottom: 5%; right: 5%; animation-delay: 1.5s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Canvas styling for the firework animation */
+    #firework-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    /* --- STYLES FOR SIDE IMAGES --- */
+    .page-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .side-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 0 40px;
+        z-index: 5;
+    }
+
+    .side-image-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 20px;
+        width: 220px;
+        text-align: center;
+        border: 1px solid rgba(255, 182, 193, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .side-image-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+    }
+    
+    .side-img {
+        width: 180px;
+        height: 250px;
+        border-radius: 15px; /* Slightly rounded corners for rectangle */
+        object-fit: cover;
+        border: 3px solid #ffb6c1;
+        margin-bottom: 12px;
+    }
+
+    .side-msg {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9em;
+        font-weight: 300;
+        color: #f0e6ff;
+        line-height: 1.4;
+        margin: 0;
+        text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+    }
+    /* --- END OF SIDE IMAGE STYLES --- */
+
+    /* --- RESPONSIVE STYLES FOR MOBILE --- */
+    @media (max-width: 1200px) {
+        .page-wrapper {
+            /* Stacks the main container and galleries vertically */
+            flex-direction: column;
+        }
+        .side-gallery {
+            /* Changes galleries to be horizontal rows */
+            flex-direction: row;
+            flex-wrap: wrap; /* Allows images to wrap on small screens */
+            justify-content: center;
+            margin: 30px 0; /* Adds space between main card and galleries */
+        }
+    }
+    
+    @media (max-width: 600px) {
+      .main-container { padding: 20px; margin: 10px; }
+      h1 { font-size: 2.2em; }
+      .simran-img { width: 150px; height: 150px; }
+      p, .wish { font-size: 1em; width: 90%; }
+      #finalWish { font-size: 1.5em; }
+      #goodnight { font-size: 1.4em; }
+      .side-gallery {
+          gap: 15px;
+      }
+      .side-image-card {
+          width: 180px; /* Make cards a bit smaller on mobile */
+          padding: 15px;
+      }
+      .side-img {
+          width: 150px;
+          height: 210px; /* Maintain aspect ratio */
+      }
+    }
+    /* --- END OF RESPONSIVE STYLES --- */
+  </style>
+</head>
+<body class="content-body">
+  
+  <canvas id="firework-canvas" class="hidden"></canvas>
+
+  <div class="heart">💖</div>
+  <div class="heart">💕</div>
+  <div class="heart">💗</div>
+  <div class="heart">💝</div>
+
+  <div class="birthday-decoration">🎂</div>
+  <div class="birthday-decoration">🎉</div>
+  <div class="birthday-decoration">🎈</div>
+  <div class="birthday-decoration">🎁</div>
+
+  <video id="bg-video" autoplay muted loop>
+    <source src="Black Gold Modern Happy Birthday Video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="page-wrapper">
+    
+    <div class="side-gallery side-gallery-left hidden">
+        <div class="side-image-card">
+            <img src="IMG-20250830-WA0108.jpg" alt="Simran Memory 1" class="side-img">
+            <p class="side-msg">On your birthday, I can only say- your friendship is the most precious gift life gave me.</p>
+        </div>
+        <div class="side-image-card">
+            <img src="IMG-20250830-WA0107.jpg" alt="Simran Memory 2" class="side-img">
+            <p class="side-msg">The things that make you different are exactly what make you truly YOU</p>
+        </div>
+    </div>
+
+    <div id="content-wrapper">
+      <div class="main-container">
+        <h1>Happy Birthday Simran 💖</h1>
+
+        <button onclick="playMusic()">Play Music 🎵</button>
+        <audio id="bg-music" src="the-quarrel-sad-slow-piano-music-314449.mp3"></audio>
+
+        <div id="simranDiv" class="hidden">
+          <img src="WhatsApp Image 2025-08-21 at 01.19.25_30bfee1a.jpg" alt="Simran" class="simran-img">
+        </div>
+
+        <div class="wish" id="wish1">🌟 On this special day, I want you to know how amazing you are! 🌟</div>
+        <div class="wish" id="wish2">💕 Your smile is one of those things I never want to see fade.💕</div>
+        <div class="wish" id="wish3">🎈 May this new year bring you endless joy and beautiful moments 🎈</div>
+        <div class="wish" id="wish4">✨ You deserve all the happiness in the world ✨</div>
+        <div class="wish" id="wish5">🌸 So, SOS i want you to be positive about yourself🌸</div>
+        <div class="wish" id="wish6">Your Strangest online friend-- Adi</div>
+
+        <div id="finalWish">🎂 Make a wish and blow out the candles! 🎂</div>
+
+        <div id="lights">
+          <button class="light-btn" onclick="turnOffLights()">Turn off the lights 💡</button>
+        </div>
+
+        <div id="goodnight">🌙 Sweet dreams, birthday girl! 🌙</div>
+      </div>
+    </div>
+
+    <div class="side-gallery side-gallery-right hidden">
+        <div class="side-image-card">
+            <img src="IMG-20250830-WA0110.jpg" alt="Simran Memory 3" class="side-img">
+            <p class="side-msg">You are special, and you always will be — not just for me, but for everyone lucky enough to know you.</p>
+        </div>
+        <div class="side-image-card">
+            <img src="IMG-20250830-WA0109.jpg" alt="Simran Memory 4" class="side-img">
+            <p class="side-msg">The way you balance being unique and hardworking inspires me every single day.</p>
+        </div>
+    </div>
+
+  </div>
+
+  <script>
+    // --- PART 1: FIREWORK ANIMATION LOGIC ---
+    let animationFrameId; // To control the animation loop
+
+    function startFireworkAnimation() {
+      const c = document.getElementById("firework-canvas");
+      let w = (c.width = window.innerWidth),
+        h = (c.height = window.innerHeight),
+        ctx = c.getContext("2d"),
+        hw = w / 2,
+        hh = h / 2,
+        opts = {
+          strings: ["HAPPY", "BIRTHDAY!", "SIMRAN"],
+          charSize: 30,
+          charSpacing: 35,
+          lineHeight: 40,
+          fireworkSpawnTime: 200,
+          letterContemplatingWaitTime: 400, // Slightly longer wait time
+          // (Other opts are kept from the original code)
+          cx:w/2,cy:h/2,fireworkPrevPoints:10,fireworkBaseLineWidth:5,fireworkAddedLineWidth:8,fireworkBaseReachTime:30,fireworkAddedReachTime:30,fireworkCircleBaseSize:20,fireworkCircleAddedSize:10,fireworkCircleBaseTime:30,fireworkCircleAddedTime:30,fireworkCircleFadeBaseTime:10,fireworkCircleFadeAddedTime:5,fireworkBaseShards:5,fireworkAddedShards:5,fireworkShardPrevPoints:3,fireworkShardBaseVel:4,fireworkShardAddedVel:2,fireworkShardBaseSize:3,fireworkShardAddedSize:3,gravity:0.1,upFlow:-0.1,balloonSpawnTime:20,balloonBaseInflateTime:10,balloonAddedInflateTime:10,balloonBaseSize:20,balloonAddedSize:20,balloonBaseVel:0.4,balloonAddedVel:0.4,balloonBaseRadian:-(Math.PI/2-0.5),balloonAddedRadian:-1
+        },
+        calc = {
+          totalWidth: opts.charSpacing * Math.max(opts.strings[0].length, opts.strings[1].length),
+        },
+        Tau = Math.PI * 2,
+        TauQuarter = Tau / 4,
+        letters = [];
+
+      ctx.font = opts.charSize + "px Verdana";
+
+      function Letter(char, x, y) {
+        this.char = char; this.x = x; this.y = y;
+        this.dx = -ctx.measureText(char).width / 2; this.dy = +opts.charSize / 2;
+        this.fireworkDy = this.y - hh;
+        var hue = (x / calc.totalWidth) * 360;
+        this.color = "hsl(hue,80%,50%)".replace("hue", hue);
+        this.lightAlphaColor = "hsla(hue,80%,light%,alp)".replace("hue", hue);
+        this.lightColor = "hsl(hue,80%,light%)".replace("hue", hue);
+        this.alphaColor = "hsla(hue,80%,50%,alp)".replace("hue", hue);
+        this.reset();
+      }
+      Letter.prototype.reset = function () {
+        this.phase = "firework"; this.tick = 0; this.spawned = false;
+        this.spawningTime = (opts.fireworkSpawnTime * Math.random()) | 0;
+        this.reachTime = ((opts.fireworkBaseReachTime + opts.fireworkAddedReachTime * Math.random()) | 0);
+        this.lineWidth = (opts.fireworkBaseLineWidth + opts.fireworkAddedLineWidth * Math.random());
+        this.prevPoints = [[0, hh, 0]];
+      };
+      Letter.prototype.step = function () {
+        if (this.phase === "firework") {
+          if (!this.spawned) {
+            ++this.tick;
+            if (this.tick >= this.spawningTime) {
+              this.tick = 0; this.spawned = true;
+            }
+          } else {
+            ++this.tick;
+            var linearProportion = this.tick / this.reachTime, armonicProportion = Math.sin(linearProportion * TauQuarter), x = linearProportion * this.x, y = hh + armonicProportion * this.fireworkDy;
+            if (this.prevPoints.length > opts.fireworkPrevPoints) this.prevPoints.shift();
+            this.prevPoints.push([x, y, linearProportion * this.lineWidth]);
+            var lineWidthProportion = 1 / (this.prevPoints.length - 1);
+            for (var i = 1; i < this.prevPoints.length; ++i) {
+              var point = this.prevPoints[i], point2 = this.prevPoints[i - 1];
+              ctx.strokeStyle = this.alphaColor.replace("alp", i / this.prevPoints.length);
+              ctx.lineWidth = point[2] * lineWidthProportion * i;
+              ctx.beginPath(); ctx.moveTo(point[0], point[1]); ctx.lineTo(point2[0], point2[1]); ctx.stroke();
+            }
+            if (this.tick >= this.reachTime) {
+              this.phase = "contemplate";
+              this.circleFinalSize = opts.fireworkCircleBaseSize + opts.fireworkCircleAddedSize * Math.random();
+              this.circleCompleteTime = ((opts.fireworkCircleBaseTime + opts.fireworkCircleAddedTime * Math.random()) | 0);
+              this.circleCreating = true; this.circleFading = false;
+              this.circleFadeTime = ((opts.fireworkCircleFadeBaseTime + opts.fireworkCircleFadeAddedTime * Math.random()) | 0);
+              this.tick = 0; this.tick2 = 0;
+              this.shards = [];
+              var shardCount = ((opts.fireworkBaseShards + opts.fireworkAddedShards * Math.random()) | 0), angle = Tau / shardCount, cos = Math.cos(angle), sin = Math.sin(angle), x = 1, y = 0;
+              for (var i = 0; i < shardCount; ++i) {
+                var x1 = x; x = x * cos - y * sin; y = y * cos + x1 * sin;
+                this.shards.push(new Shard(this.x, this.y, x, y, this.alphaColor));
+              }
+            }
+          }
+        } else if (this.phase === "contemplate") {
+          ++this.tick;
+          if (this.circleCreating) {
+            ++this.tick2;
+            var proportion = this.tick2 / this.circleCompleteTime, armonic = -Math.cos(proportion * Math.PI) / 2 + 0.5;
+            ctx.beginPath();
+            ctx.fillStyle = this.lightAlphaColor.replace("light", 50 + 50 * proportion).replace("alp", proportion);
+            ctx.beginPath(); ctx.arc(this.x, this.y, armonic * this.circleFinalSize, 0, Tau); ctx.fill();
+            if (this.tick2 > this.circleCompleteTime) {
+              this.tick2 = 0; this.circleCreating = false; this.circleFading = true;
+            }
+          } else if (this.circleFading) {
+            ctx.fillStyle = this.lightColor.replace("light", 70);
+            ctx.fillText(this.char, this.x + this.dx, this.y + this.dy);
+            ++this.tick2;
+            var proportion = this.tick2 / this.circleFadeTime, armonic = -Math.cos(proportion * Math.PI) / 2 + 0.5;
+            ctx.beginPath();
+            ctx.fillStyle = this.lightAlphaColor.replace("light", 100).replace("alp", 1 - armonic);
+            ctx.arc(this.x, this.y, this.circleFinalSize, 0, Tau); ctx.fill();
+            if (this.tick2 >= this.circleFadeTime) this.circleFading = false;
+          } else {
+            ctx.fillStyle = this.lightColor.replace("light", 70);
+            ctx.fillText(this.char, this.x + this.dx, this.y + this.dy);
+          }
+          for (var i = 0; i < this.shards.length; ++i) {
+            this.shards[i].step();
+            if (!this.shards[i].alive) {
+              this.shards.splice(i, 1); --i;
+            }
+          }
+          if (this.tick > opts.letterContemplatingWaitTime) {
+            this.phase = "balloon";
+            this.tick = 0; this.spawning = true;
+            this.spawnTime = (opts.balloonSpawnTime * Math.random()) | 0;
+            this.inflating = false;
+            this.inflateTime = ((opts.balloonBaseInflateTime + opts.balloonAddedInflateTime * Math.random()) | 0);
+            this.size = ((opts.balloonBaseSize + opts.balloonAddedSize * Math.random()) | 0);
+            var rad = opts.balloonBaseRadian + opts.balloonAddedRadian * Math.random(), vel = opts.balloonBaseVel + opts.balloonAddedVel * Math.random();
+            this.vx = Math.cos(rad) * vel; this.vy = Math.sin(rad) * vel;
+          }
+        } else if (this.phase === "balloon") {
+          ctx.strokeStyle = this.lightColor.replace("light", 80);
+          if (this.spawning) {
+            ++this.tick;
+            ctx.fillStyle = this.lightColor.replace("light", 70);
+            ctx.fillText(this.char, this.x + this.dx, this.y + this.dy);
+            if (this.tick >= this.spawnTime) {
+              this.tick = 0; this.spawning = false; this.inflating = true;
+            }
+          } else if (this.inflating) {
+            ++this.tick;
+            var proportion = this.tick / this.inflateTime, x = (this.cx = this.x), y = (this.cy = this.y - this.size * proportion);
+            ctx.fillStyle = this.alphaColor.replace("alp", proportion);
+            ctx.beginPath(); generateBalloonPath(x, y, this.size * proportion); ctx.fill();
+            ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, this.y); ctx.stroke();
+            ctx.fillStyle = this.lightColor.replace("light", 70);
+            ctx.fillText(this.char, this.x + this.dx, this.y + this.dy);
+            if (this.tick >= this.inflateTime) {
+              this.tick = 0; this.inflating = false;
+            }
+          } else {
+            this.cx += this.vx; this.cy += this.vy += opts.upFlow;
+            ctx.fillStyle = this.color;
+            ctx.beginPath(); generateBalloonPath(this.cx, this.cy, this.size); ctx.fill();
+            ctx.beginPath(); ctx.moveTo(this.cx, this.cy); ctx.lineTo(this.cx, this.cy + this.size); ctx.stroke();
+            ctx.fillStyle = this.lightColor.replace("light", 70);
+            ctx.fillText(this.char, this.cx + this.dx, this.cy + this.dy + this.size);
+            if (this.cy + this.size < -hh || this.cx < -hw || this.cy > hw) this.phase = "done";
+          }
+        }
+      };
+      
+      function Shard(x, y, vx, vy, color) {
+        var vel = opts.fireworkShardBaseVel + opts.fireworkShardAddedVel * Math.random();
+        this.vx = vx * vel; this.vy = vy * vel;
+        this.x = x; this.y = y;
+        this.prevPoints = [[x, y]]; this.color = color;
+        this.alive = true;
+        this.size = opts.fireworkShardBaseSize + opts.fireworkShardAddedSize * Math.random();
+      }
+      Shard.prototype.step = function () {
+        this.x += this.vx; this.y += this.vy += opts.gravity;
+        if (this.prevPoints.length > opts.fireworkShardPrevPoints) this.prevPoints.shift();
+        this.prevPoints.push([this.x, this.y]);
+        var lineWidthProportion = this.size / this.prevPoints.length;
+        for (var k = 0; k < this.prevPoints.length - 1; ++k) {
+          var point = this.prevPoints[k], point2 = this.prevPoints[k + 1];
+          ctx.strokeStyle = this.color.replace("alp", k / this.prevPoints.length);
+          ctx.lineWidth = k * lineWidthProportion;
+          ctx.beginPath(); ctx.moveTo(point[0], point[1]); ctx.lineTo(point2[0], point2[1]); ctx.stroke();
+        }
+        if (this.prevPoints[0][1] > hh) this.alive = false;
+      };
+      
+      function generateBalloonPath(x, y, size) {
+        ctx.moveTo(x, y);
+        ctx.bezierCurveTo(x - size / 2, y - size / 2, x - size / 4, y - size, x, y - size);
+        ctx.bezierCurveTo(x + size / 4, y - size, x + size / 2, y - size / 2, x, y);
+      }
+
+      function anim() {
+        animationFrameId = window.requestAnimationFrame(anim);
+        ctx.fillStyle = "#111";
+        ctx.fillRect(0, 0, w, h);
+        ctx.translate(hw, hh);
+        var done = true;
+        for (var l = 0; l < letters.length; ++l) {
+          letters[l].step();
+          if (letters[l].phase !== "done") done = false;
+        }
+        ctx.translate(-hw, -hh);
+        if (done) {
+            // Stop the animation and proceed to the main content
+            window.cancelAnimationFrame(animationFrameId);
+            onAnimationComplete();
+        }
+      }
+      
+      for (let i = 0; i < opts.strings.length; ++i) {
+        for (var j = 0; j < opts.strings[i].length; ++j) {
+          letters.push(new Letter(opts.strings[i][j], j * opts.charSpacing + opts.charSpacing / 2 - (opts.strings[i].length * opts.charSize) / 2, i * opts.lineHeight + opts.lineHeight / 2 - (opts.strings.length * opts.lineHeight) / 2));
+        }
+      }
+      
+      anim();
+      
+      window.addEventListener("resize", function () {
+        w = c.width = window.innerWidth;
+        h = c.height = window.innerHeight;
+        hw = w / 2;
+        hh = h / 2;
+        ctx.font = opts.charSize + "px Verdana";
+      });
+    }
+
+
+    // --- PART 2: BIRTHDAY WISHES PAGE LOGIC ---
+    let currentWish = 0;
+    // UPDATED wishes array to include the new wish6
+    const wishes = ['wish1', 'wish2', 'wish3', 'wish4', 'wish5', 'wish6'];
+    
+    function playMusic() {
+      const music = document.getElementById('bg-music');
+      const pageWrapper = document.querySelector('.page-wrapper');
+      const canvas = document.getElementById('firework-canvas');
+      
+      // Play music
+      music.play();
+      
+      // Hide the main content
+      pageWrapper.classList.add('hidden');
+      
+      // Show the canvas and start the animation
+      document.body.classList.remove('content-body');
+      document.body.classList.add('animation-body');
+      canvas.classList.remove('hidden');
+      startFireworkAnimation();
+    }
+    
+    // This function is called when the firework animation finishes
+    function onAnimationComplete() {
+        const pageWrapper = document.querySelector('.page-wrapper');
+        const canvas = document.getElementById('firework-canvas');
+        const simranDiv = document.getElementById('simranDiv');
+        const musicButton = document.querySelector('button[onclick="playMusic()"]');
+        const sideGalleries = document.querySelectorAll('.side-gallery');
+
+        // Hide the canvas and switch body style back
+        canvas.classList.add('hidden');
+        document.body.classList.remove('animation-body');
+        document.body.classList.add('content-body');
+        
+        // Show the main content again, but hide the button
+        pageWrapper.classList.remove('hidden');
+        musicButton.classList.add('hidden');
+
+        // Show Simran's image and the side galleries
+        simranDiv.classList.remove('hidden');
+        sideGalleries.forEach(gallery => gallery.classList.remove('hidden'));
+
+        // Start the wishes
+        setTimeout(showNextWish, 2000);
+    }
+    
+    function showNextWish() {
+      if (currentWish < wishes.length) {
+        document.getElementById(wishes[currentWish]).style.display = 'block';
+        currentWish++;
+        setTimeout(showNextWish, 3000); // Show next wish after 3 seconds
+      } else {
+        // Show final wish and lights
+        setTimeout(() => {
+          document.getElementById('finalWish').style.display = 'block';
+          setTimeout(() => {
+            document.getElementById('lights').style.display = 'block';
+          }, 2000);
+        }, 1000);
+      }
+    }
+    
+    function turnOffLights() {
+      document.body.style.background = 'linear-gradient(135deg, #000011 0%, #001122 50%, #002244 100%)';
+      document.getElementById('lights').style.display = 'none';
+      
+      setTimeout(() => {
+        document.getElementById('goodnight').style.display = 'block';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
